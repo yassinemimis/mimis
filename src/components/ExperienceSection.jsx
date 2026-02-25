@@ -1,11 +1,34 @@
 "use client";
 import { useState } from "react";
-import { Briefcase, Smartphone, BarChart2, Monitor } from "lucide-react";
+import { Briefcase, Smartphone, BarChart2, Monitor, Globe   } from "lucide-react";
 
 export default function ExperienceSection({ dark }) {
   const [activeTab, setActiveTab] = useState(0);
 
   const experiences = [
+    {
+      company: "9547-1413 Québec inc.",
+      position: "Mobile App Developer Intern",
+      period: "January 2026 - Present",
+      type: "Internship",
+      location: "Remote — Québec, Canada",
+      description: "Designing and developing a hybrid mobile application (iOS/Android) with advanced offline capabilities for field teams requiring access to critical data in low-connectivity environments",
+      achievements: [
+        "Designing an offline-first architecture using Ionic/Capacitor with bidirectional data synchronization",
+        "Implementing robust local storage with IndexedDB via Dexie.js and File System API",
+        "Developing conflict resolution strategies for data sync between local and remote databases",
+        "Integrating device features: geolocation, QR code scanning, local push notifications",
+        "Setting up CI/CD pipeline with GitHub Actions and achieving over 80% test coverage",
+        "Applying Scrum/Agile methodology in a fully remote international environment"
+      ],
+      technologies: [
+        "Ionic", "Capacitor", "React", "IndexedDB",
+        "Dexie.js", "Node.js", "Service Workers",
+        "GitHub Actions", "CI/CD", "Scrum"
+      ],
+      color: "from-red-500 to-rose-500",
+      icon: <Globe size={28} color="white" />
+    },
     {
       company: "Freelance",
       position: "Freelance Developer",

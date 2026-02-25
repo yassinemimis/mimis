@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, MessageCircle } from "lucide-react";
 
 export default function ContactSection({ dark }) {
     const contactMethods = [
@@ -24,6 +24,13 @@ export default function ContactSection({ dark }) {
             value: "Mohammed Yacine",
             href: "https://www.linkedin.com/in/mohammed-yacine-kherbouche-110509263/",
             color: "from-orange-500 to-red-500"
+        },
+        {
+            icon: <MessageCircle size={24} />,
+            title: "WhatsApp",
+            value: "+213 799 23 76 97",
+            href: "https://wa.me/213799237697",
+            color: "from-green-500 to-emerald-500"
         }
     ];
 
@@ -55,7 +62,7 @@ export default function ContactSection({ dark }) {
                     Let's work together to turn your idea into an innovative digital reality
                 </p>
 
-                <div className="grid md:grid-cols-3 gap-6 mb-12">
+                <div className="grid md:grid-cols-4 gap-6 mb-12">
                     {contactMethods.map((method, i) => (
                         <a
                             key={i}
@@ -88,6 +95,16 @@ export default function ContactSection({ dark }) {
                     </a>
 
                     <a
+                        href="https://wa.me/213799237697"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-green-500/50 transition-all hover:scale-105"
+                    >
+                        <MessageCircle size={24} />
+                        Chat on WhatsApp
+                    </a>
+
+                    <a
                         href="https://github.com/yassinemimis"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -99,7 +116,7 @@ export default function ContactSection({ dark }) {
                 </div>
 
                 <p className={textColor}>
-                    Available for freelance work and exciting projects 
+                    Available for freelance work and exciting projects
                 </p>
             </div>
         </section>

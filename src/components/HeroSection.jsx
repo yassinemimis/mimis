@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Mail, Github, Linkedin, Download, Hand } from "lucide-react";
 
 export default function HeroSection({ dark }) {
-  const bgColor = dark ? "bg-gray-950" : "bg-white";
+
   const textColor = dark ? "text-gray-100" : "text-gray-900";
   const subtextColor = dark ? "text-gray-400" : "text-gray-600";
   const badgeBg = dark ? "bg-blue-900/30" : "bg-blue-100";
@@ -15,11 +15,11 @@ export default function HeroSection({ dark }) {
   const avatarBorder = dark ? "border-gray-900" : "border-white";
 
   return (
-    <section className={`min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden ${bgColor} ${textColor}`}>
+    <section className={`min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden ${textColor}`}>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
-          {/* المحتوى على اليسار */}
+          {}
           <div className="text-left lg:text-left text-center">
             <div className="mb-4">
               <span className={`px-4 py-2 ${badgeBg} ${badgeText} rounded-full text-sm font-semibold inline-flex items-center gap-2`}>
@@ -103,7 +103,7 @@ export default function HeroSection({ dark }) {
           <div className="hidden lg:flex justify-center lg:justify-end">
             <div className="relative">
               <img
-                src="images/2.png"
+                src="images/3.png"
                 alt="Mohammed Yacine Kherbouche"
             
               />
