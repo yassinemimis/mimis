@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ExternalLink, Github, Globe, Smartphone, Monitor, Target, Briefcase, Ticket, Shield, ShoppingCart, Home, CheckCircle, Star, Dumbbell,Cloud } from "lucide-react";
+import { ExternalLink, Github, Globe, Droplet, Smartphone, Monitor, Target, Briefcase, Ticket, Shield, ShoppingCart, Home, CheckCircle, Star, Dumbbell, Cloud } from "lucide-react";
 
 export default function ProjectsSection({ dark }) {
     const [activeFilter, setActiveFilter] = useState("all");
@@ -9,6 +9,35 @@ export default function ProjectsSection({ dark }) {
     const [showAll, setShowAll] = useState(false);
 
     const projects = [
+        {
+            name: "BloodLink",
+            tech: [
+                "React + Vite",
+                "TypeScript",
+                "Tailwind CSS",
+                "NestJS",
+                "Socket.IO",
+                "Prisma",
+                "PostgreSQL",
+                "nginx",
+                "Vercel"
+            ],
+            desc: "BloodLink is a full‑stack web platform that connects blood requesters with compatible donors. It features geolocation-based matching, real‑time chat, push/email notifications, and an admin panel for configuration and SMTP settings. Built for emergency responsiveness and a smooth user experience.",
+            color: "from-red-500 to-pink-500",
+            category: "web",
+            icon: <Droplet className="w-6 h-6" />,
+            features: [
+                "Create and manage blood requests with blood group, urgency level and units needed",
+                "Geolocation-based donor matching with configurable search radius",
+                "Realtime room-based chat between requester and donors using Socket.IO (WSS)",
+                "Push and email notifications for critical events and new messages",
+                "Admin settings panel to manage SMTP and environment config securely",
+                "Responsive, accessible UI with Tailwind CSS and form validation (react-hook-form + zod)",
+                "Production-ready deployment: HTTPS, nginx reverse-proxy, Let's Encrypt TLS",
+                "Robust backend with NestJS, Prisma ORM and PostgreSQL"
+            ],
+            link: "https://blood-link-5zjg.vercel.app/",
+        },
         {
             name: "MyTicketsApp",
             tech: ["Flutter", "Node.js + Express.js", "MySQL", "Provider / Riverpod"],
@@ -25,6 +54,7 @@ export default function ProjectsSection({ dark }) {
             ],
             link: "https://my-tickets-app-website-8rr9.vercel.app/",
         },
+
         {
             name: "Gestion Stock",
             tech: ["Electron", "React", "SQLite"],
@@ -66,7 +96,7 @@ export default function ProjectsSection({ dark }) {
             features: ["Member Management", "Subscription Tracking", "Analytics Dashboard"],
             link: "https://gym-management-website-seven.vercel.app/",
         },
-                {
+        {
             name: "Weather Forecast App",
             tech: ["React Native", "wheather API", "Bloc"],
             desc: "A beautiful weather application that provides real-time weather forecasts and alerts",
@@ -80,7 +110,7 @@ export default function ProjectsSection({ dark }) {
                 "Weather Alerts",
                 "Beautiful Animations",
             ],
-             link: "https://weather-website-ten-blond.vercel.app/",
+            link: "https://weather-website-ten-blond.vercel.app/",
         },
 
         {
@@ -134,7 +164,7 @@ export default function ProjectsSection({ dark }) {
             name: "Scorpio Club IT",
             tech: ["HTML", "CSS", "JavaScript"],
             desc: "A modern and elegant presentation website for the Scorpio Club IT — showcasing projects, members, and activities with a responsive and dynamic UI.",
-             color: "from-blue-900 to-blue-500",
+            color: "from-blue-900 to-blue-500",
             category: "web",
             icon: <Globe className="w-6 h-6" />,
             features: [
