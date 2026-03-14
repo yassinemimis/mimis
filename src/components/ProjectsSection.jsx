@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ExternalLink, Github, Globe, Droplet, Smartphone, Monitor, Target, Briefcase, Ticket, Shield, ShoppingCart, Home, CheckCircle, Star, Dumbbell, Cloud } from "lucide-react";
+import { ExternalLink, Github, Globe, Droplet, Smartphone, Monitor, Target, Briefcase, Ticket, Shield, ShoppingCart, Home, CheckCircle, Star, Dumbbell, Cloud,Rotate3d } from "lucide-react";
 
 export default function ProjectsSection({ dark }) {
     const [activeFilter, setActiveFilter] = useState("all");
@@ -9,6 +9,34 @@ export default function ProjectsSection({ dark }) {
     const [showAll, setShowAll] = useState(false);
 
     const projects = [
+        {
+            name: "Mimis Portfolio 3D",
+            tech: [
+                "Next.js 14",
+                "React Three Fiber",
+                "Three.js",
+                "Drei",
+                "Zustand",
+                "Framer Motion",
+                "Tailwind CSS",
+                "TypeScript"
+            ],
+            desc: "A futuristic 3D interactive developer portfolio built with React Three Fiber. Features a nuclear plasma hero object, nebula crystal orbs for navigation, scroll-velocity project carousel, mouse energy effects, and smooth camera transitions between sections.",
+            color: "from-cyan-500 to-teal-500",
+            category: "web",
+             icon: <Rotate3d className="w-6 h-6" />,
+            features: [
+                "Nuclear plasma sphere hero with orbit rings and energy bursts",
+                "5 Crystal Shards + Nebula Spheres interactive nav orbs",
+                "Full-screen 3D CSS project carousel with scroll velocity",
+                "Mouse energy — particle attraction + ripple rings",
+                "Smooth lerp camera transitions between sections",
+                "Experience timeline with internships and freelance work",
+                "Custom neon cursor with lagging halo",
+                "Animated skill bars, About, and Contact panels"
+            ],
+            link: "https://portflio-3d.vercel.app/",
+        },
         {
             name: "BloodLink",
             tech: [
