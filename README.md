@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# mimis — Portfolio Redesign
+
+Dark editorial portfolio built with **Next.js 14 App Router**.
+
+## Stack
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Fonts**: Syne (display) + DM Mono (monospace) via Google Fonts
+- **Styling**: Pure inline styles + CSS variables (no Tailwind dependency)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── globals.css      ← Design tokens + base styles
+│   ├── layout.tsx       ← Root layout + font links
+│   └── page.tsx         ← Page assembly
+├── components/
+│   ├── Navbar.tsx       ← Fixed nav with scroll effect
+│   ├── Hero.tsx         ← Full-height hero with stats grid
+│   ├── Projects.tsx     ← Numbered rows with filter tabs
+│   ├── Experience.tsx   ← 2-column grid
+│   ├── Skills.tsx       ← 5-column skill columns
+│   └── Contact.tsx      ← CTA + links + footer
+└── data/
+    └── portfolio.ts     ← All your content in one place
+```
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+All content lives in **`src/data/portfolio.ts`** — edit your name, projects, experience and links there.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Design tokens (colors, fonts) are in **`src/app/globals.css`** under `:root`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
+```bash
+# Build
+npm run build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Deploy to Vercel
+vercel --prod
+```

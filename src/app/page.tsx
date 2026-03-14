@@ -1,36 +1,27 @@
 "use client";
-import { useState } from "react";
-import GalaxyBackground from "../components/GalaxyBackground";
-import Header from "../components/Header";
-import HeroSection from "../components/HeroSection";
-import AboutSection from "../components/AboutSection";
-import ProjectsSection from "../components/ProjectsSection";
-import SkillsSection from "../components/SkillsSection";
-import ContactSection from "../components/ContactSection";
-import ExperienceSection from "../components/ExperienceSection";
-import Footer from "../components/Footer";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
+import Skills from "@/components/Skills";
+import Contact from "@/components/Contact";
 
 export default function Home() {
-  const [dark, setDark] = useState(true);
-
-  const textColor = dark ? "text-gray-100" : "text-gray-900";
-
   return (
-    <div className={`min-h-screen ${textColor} transition-colors duration-300 relative`}>
-      {/* Galaxy Background */}
-      <GalaxyBackground dark={dark} />
-
-      {/* Content */}
-      <div className="relative z-10">
-        <Header dark={dark} setDark={setDark} />
-        <HeroSection dark={dark} />
-        <AboutSection dark={dark} />
-        <ProjectsSection dark={dark} />
-        <ExperienceSection dark={dark} />
-        <SkillsSection dark={dark} />
-        <ContactSection dark={dark} />
-        <Footer />
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <main className="port-main" style={{
+        maxWidth: "1200px", margin: "0 auto",
+        borderLeft: "0.5px solid var(--border)",
+        borderRight: "0.5px solid var(--border)",
+        minHeight: "100vh",
+      }}>
+        <Hero />
+        <Projects />
+        <Experience />
+        <Skills />
+        <Contact />
+      </main>
+    </>
   );
 }
