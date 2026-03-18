@@ -18,7 +18,7 @@ export const data = {
 
   stats: [
     { value: "10+", label: "Projects Shipped" },
-    { value: "2+",  label: "Years Freelance" },
+    { value: "3+",  label: "Years Freelance" },
     { value: "5+",  label: "Tech Stacks" },
     { value: "90%", label: "Client Satisfaction" },
   ],
